@@ -11,14 +11,45 @@ repositories {
 }
 
 dependencies {
+
+    implementation('io.micronaut.security:micronaut-security-jwt:3.10.0')
+    implementation('io.micronaut.security:micronaut-security-annotations:3.10.0')
+
+    implementation 'io.projectreactor:reactor-core:3.5.4'
+
+    implementation 'org.springframework.security:spring-security-core:6.0.2'
+    implementation 'org.springframework.security:spring-security-crypto:6.0.2'
+    implementation 'org.projectlombok:lombok:1.18.22'
     annotationProcessor("io.micronaut:micronaut-http-validation")
-    annotationProcessor("io.micronaut.security:micronaut-security-annotations")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-jackson-databind")
-    implementation("io.micronaut.security:micronaut-security")
-    implementation("io.micronaut.security:micronaut-security-jwt")
     implementation("jakarta.annotation:jakarta.annotation-api")
     runtimeOnly("ch.qos.logback:logback-classic")
+    annotationProcessor("org.projectlombok:lombok")
+    annotationProcessor("io.micronaut:micronaut-http-validation")
+
+    //DB
+    implementation('jakarta.annotation:jakarta.annotation-api:2.1.0')
+    implementation("io.micronaut.sql:micronaut-hibernate-jpa")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    implementation("io.micronaut.flyway:micronaut-flyway")
+
+    annotationProcessor("org.projectlombok:lombok")
+    annotationProcessor("io.micronaut:micronaut-http-validation")
+    implementation("io.micronaut:micronaut-http-client")
+    implementation("io.micronaut:micronaut-runtime")
+    implementation("io.micronaut.sql:micronaut-hibernate-jpa")
+    implementation("javax.annotation:javax.annotation-api")
+    compileOnly("org.projectlombok:lombok")
+    runtimeOnly("ch.qos.logback:logback-classic")
+    runtimeOnly("org.postgresql:postgresql")
+    runtimeOnly("io.micronaut.sql:micronaut-jdbc-hikari")
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.testcontainers:postgresql")
+    testImplementation("org.testcontainers:testcontainers")
+    implementation("io.micronaut:micronaut-validation")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    implementation("io.micronaut.flyway:micronaut-flyway")
 }
 
 application {
